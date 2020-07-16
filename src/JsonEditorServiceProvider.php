@@ -1,6 +1,6 @@
 <?php
 
-namespace Jxlwqq\JsonEditor;
+namespace ak73gucas\JsonEditor;
 
 use Encore\Admin\Admin;
 use Encore\Admin\Form;

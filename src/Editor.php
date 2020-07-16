@@ -1,11 +1,17 @@
 <?php
 
-namespace Jxlwqq\JsonEditor;
+namespace ak73gucas\JsonEditor;
 
 use Encore\Admin\Form\Field;
 
 class Editor extends Field
 {
+    /**
+     * Default rows of textarea.
+     *
+     * @var int
+     */
+    protected $rows = 10;
     protected $view = 'laravel-admin-json-editor::editor';
 
     protected static $css = [
@@ -15,6 +21,20 @@ class Editor extends Field
     protected static $js = [
         'vendor/laravel-admin-ext/json-editor/jsoneditor-6.2.1/dist/jsoneditor.min.js',
     ];
+
+    /**
+     * Set rows of show.
+     *
+     * @param int $rows
+     *
+     * @return $this
+     */
+    public function rows($rows = 10)
+    {
+        $this->rows = $rows;
+
+        return $this;
+    }
 
     public function render()
     {
@@ -54,6 +74,6 @@ $('input[id={$this->id}_input]').val(JSON.stringify(json))
 })
 EOT;
 
-        return parent::render();
+        return parent::render()->with(['rows' => $this->rows]);
     }
 }
