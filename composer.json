@@ -1,14 +1,14 @@
 {
-    "name": "jxlwqq/json-editor",
+    "name": "ak73gucas/json-editor",
     "description": "JSON Editor for Laravel-admin",
     "type": "library",
     "keywords": ["laravel-admin", "extension"],
-    "homepage": "https://github.com/jxlwqq/json-editor",
+    "homepage": "https://github.com/ak73gucas/json-editor",
     "license": "MIT",
     "authors": [
         {
-            "name": "jxlwqq",
-            "email": "jxlwqq@gmail.com"
+            "name": "ak73gucas",
+            "email": "zknhakuan@163.com"
         }
     ],
     "require": {
@@ -20,13 +20,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Jxlwqq\\JsonEditor\\": "src/"
+            "ak73gucas\\JsonEditor\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Jxlwqq\\JsonEditor\\JsonEditorServiceProvider"
+                "ak73gucas\\JsonEditor\\JsonEditorServiceProvider"
             ]
 
         }
